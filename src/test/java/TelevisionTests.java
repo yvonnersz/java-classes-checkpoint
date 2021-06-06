@@ -72,4 +72,26 @@ public class TelevisionTests {
 
         assertEquals(expected, actual, "If on last channel and increaseChannel() is called, it should go to the first channel");
     }
+
+    @Test
+    void decreaseChannel_decreaseChannelByOne() {
+        television.increaseChannel();
+        television.increaseChannel();
+        television.decreaseChannel();
+
+        String expected = "2 - Showtime";
+        String actual = television.currentChannel();
+
+        assertEquals(expected, actual, "decreaseChannel() should decrease channel by one");
+    }
+
+    @Test
+    void decreaseChannel_firstChannelToLastChannel() {
+        television.decreaseChannel();
+
+        String expected = "3 - ABC";
+        String actual = television.currentChannel();
+
+        assertEquals(expected, actual, "If on first channel and decreaseChannel() is called, it should go to the last channel");
+    }
 }

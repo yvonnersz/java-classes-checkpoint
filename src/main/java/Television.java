@@ -34,4 +34,12 @@ public class Television {
             index += 1;
         }
     }
+
+    public void decreaseChannel() {
+        if (index == 0) {
+            index = channels.size() - 1;
+        } else {
+            index -= 1;
+        }
+    }
 }

@@ -1,15 +1,17 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class ChannelTests {
     private Channel hbo;
     private Channel showtime;
     private Channel ABC;
 
-    @BeforeEach
-    void setup() {
+    @Test
+    void createChannel() {
         Channel hbo = new Channel(1, "HBO");
-        Channel showtime = new Channel(2, "Showtime");
-        Channel abc = new Channel(3, "ABC");
+
+        assertTrue(hbo instanceof Channel, "Can create an instance of channel with int channel and String name passed");
     }
 }

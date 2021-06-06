@@ -26,4 +26,12 @@ public class Television {
 
         return channel.getChannel() + " - " + channel.getName();
     }
+
+    public void increaseChannel() {
+        if (index == channels.size() - 1) {
+            index = 0;
+        } else {
+            index += 1;
+        }
+    }
 }

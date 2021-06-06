@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -8,10 +9,21 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TelevisionTests {
     private Television television;
+    private List<Channel> channels;
 
     @BeforeEach
     void setup() {
-        television = new Television();
+        Channel hbo = new Channel(1, "HBO");
+        Channel showtime = new Channel(2, "Showtime");
+        Channel abc = new Channel(3, "ABC");
+
+        channels = new ArrayList<>();
+
+        channels.add(hbo);
+        channels.add(showtime);
+        channels.add(abc);
+
+        television = new Television(channels);
     }
 
     @Test

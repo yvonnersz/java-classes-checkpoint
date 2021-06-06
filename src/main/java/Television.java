@@ -3,6 +3,7 @@ import java.util.List;
 public class Television {
     private boolean isOn = false;
     private List<Channel> channels;
+    private int index = 0;
 
     public Television(List<Channel> channels) {
         this.channels = channels;
@@ -18,5 +19,11 @@ public class Television {
 
     public void turnOff() {
         isOn = false;
+    }
+
+    public String currentChannel() {
+        Channel channel = channels.get(index);
+
+        return channel.getChannel() + " - " + channel.getName();
     }
 }

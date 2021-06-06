@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TelevisionTests {
     private Television television;
@@ -42,5 +41,13 @@ public class TelevisionTests {
         television.turnOn();
         television.turnOff();
         assertFalse(television.isOn(), "isOn returns false when television is turned off");
+    }
+
+    @Test
+    void currentChannel_returnsStringRepresentationOfChannel() {
+        String expected = "1 - HBO";
+        String actual = television.currentChannel();
+
+        assertEquals(expected, actual, "currentChannel() returns a String representation of the channel");
     }
 }

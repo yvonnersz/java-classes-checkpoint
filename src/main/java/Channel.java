@@ -6,4 +6,12 @@ public class Channel {
         this.channel = channel;
         this.name = name;
     }
+
+    public int getChannel() {
+        return channel;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

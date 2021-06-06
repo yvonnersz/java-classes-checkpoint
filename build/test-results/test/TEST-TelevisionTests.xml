@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TelevisionTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-06-06T00:36:49" hostname="DESKTOP-V96DEVG" time="0.029">
+<testsuite name="TelevisionTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-06-06T01:09:40" hostname="DESKTOP-V96DEVG" time="0.043">
   <properties/>
-  <testcase name="turnOn_returnsTrueWhenTelevisionIsOn()" classname="TelevisionTests" time="0.025"/>
+  <testcase name="currentChannel_returnsStringRepresentationOfChannel()" classname="TelevisionTests" time="0.036"/>
+  <testcase name="turnOn_returnsTrueWhenTelevisionIsOn()" classname="TelevisionTests" time="0.002"/>
   <testcase name="isOn_returnsFalseByDefault()" classname="TelevisionTests" time="0.002"/>
   <testcase name="turnOff_returnsFalseWhenTelevisionIsTurnedOff()" classname="TelevisionTests" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
